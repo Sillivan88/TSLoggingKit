@@ -15,5 +15,4 @@ FOUNDATION_EXPORT double TSLoggingKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char TSLoggingKitVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <TSLoggingKit/PublicHeader.h>
-
-
+#import <TSLoggingKit/TSLogging.h>

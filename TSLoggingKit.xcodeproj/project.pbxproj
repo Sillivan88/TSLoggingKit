@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		E9169CA51BBA9096007F65F4 /* TSLoggingKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E9169CA41BBA9096007F65F4 /* TSLoggingKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9169CAE1BBA90E1007F65F4 /* TSLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = E9169CAC1BBA90E1007F65F4 /* TSLogging.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9169CAF1BBA90E1007F65F4 /* TSLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = E9169CAD1BBA90E1007F65F4 /* TSLogging.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E9169CA11BBA9096007F65F4 /* TSLoggingKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TSLoggingKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9169CA41BBA9096007F65F4 /* TSLoggingKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSLoggingKit.h; sourceTree = "<group>"; };
 		E9169CA61BBA9096007F65F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9169CAC1BBA90E1007F65F4 /* TSLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSLogging.h; sourceTree = "<group>"; };
+		E9169CAD1BBA90E1007F65F4 /* TSLogging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSLogging.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,8 @@
 			isa = PBXGroup;
 			children = (
 				E9169CA41BBA9096007F65F4 /* TSLoggingKit.h */,
+				E9169CAC1BBA90E1007F65F4 /* TSLogging.h */,
+				E9169CAD1BBA90E1007F65F4 /* TSLogging.m */,
 				E9169CA61BBA9096007F65F4 /* Info.plist */,
 			);
 			path = TSLoggingKit;
@@ -59,6 +65,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9169CAE1BBA90E1007F65F4 /* TSLogging.h in Headers */,
 				E9169CA51BBA9096007F65F4 /* TSLoggingKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9169CAF1BBA90E1007F65F4 /* TSLogging.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
