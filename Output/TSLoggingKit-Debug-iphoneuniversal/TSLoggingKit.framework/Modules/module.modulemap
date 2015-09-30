@@ -1,0 +1,6 @@
+framework module TSLoggingKit {
+  umbrella header "TSLoggingKit.h"
+
+  export *
+  module * { export * }
+}
