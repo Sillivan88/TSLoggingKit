@@ -102,7 +102,10 @@ NSString *const LoggingLevelDescriptionError = @"[ERROR]";
         existingLogFileContent = @"";
     }
     NSString *logMessageWithFollowingParagraph = [NSString stringWithFormat:@"%@%@ - %@\n", existingLogFileContent, [NSDate date], logMessage];
-    [logMessageWithFollowingParagraph writeToURL:self.logFileURL atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    if (![logMessageWithFollowingParagraph writeToURL:self.logFileURL atomically:YES encoding:NSUTF8StringEncoding error:nil]) {
+        [[NSFileManager defaultManager] removeItemAtURL:self.logFileURL error:nil];
+        [[NSString stringWithFormat:@"%@ - %@\n", [NSDate date], logMessage] writeToURL:self.logFileURL atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    }
 }
 
 - (NSString *)logDescriptionForLoggingLevel:(TSLoggingLevel)loggingLevel {
