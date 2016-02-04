@@ -98,6 +98,9 @@ NSString *const LoggingLevelDescriptionError = @"[ERROR]";
 
 - (void)writeLogMessageToFile:(NSString *)logMessage {
     NSString *existingLogFileContent = [NSString stringWithContentsOfURL:self.logFileURL usedEncoding:nil error:nil];
+    if (!existingLogFileContent) {
+        existingLogFileContent = @"";
+    }
     NSString *logMessageWithFollowingParagraph = [NSString stringWithFormat:@"%@%@\n", existingLogFileContent, logMessage];
     [logMessageWithFollowingParagraph writeToURL:self.logFileURL atomically:YES encoding:NSUTF8StringEncoding error:nil];
 }
