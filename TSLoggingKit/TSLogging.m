@@ -101,7 +101,7 @@ NSString *const LoggingLevelDescriptionError = @"[ERROR]";
     if (!existingLogFileContent) {
         existingLogFileContent = @"";
     }
-    NSString *logMessageWithFollowingParagraph = [NSString stringWithFormat:@"%@%@\n", existingLogFileContent, logMessage];
+    NSString *logMessageWithFollowingParagraph = [NSString stringWithFormat:@"%@%@ - %@\n", existingLogFileContent, [NSDate date], logMessage];
     [logMessageWithFollowingParagraph writeToURL:self.logFileURL atomically:YES encoding:NSUTF8StringEncoding error:nil];
 }
 
